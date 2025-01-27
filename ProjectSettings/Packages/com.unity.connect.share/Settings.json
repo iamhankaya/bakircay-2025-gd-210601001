@@ -19,7 +19,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/Metohanhan/Documents/GitHub/bakircay-2025-gd-210601001-new/210601001-makeupexam/210601001-makeupexam/WebGL Builds;C:/Users/Metohanhan/Desktop/210601001-makeupexam/210601001-makeupexam/WebGL Builds;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/Metohanhan/Documents/GitHub/bakircay-2025-gd-210601001-new/docs;C:/Users/Metohanhan/Documents/GitHub/bakircay-2025-gd-210601001-new/210601001-makeupexam/210601001-makeupexam/WebGL Builds;C:/Users/Metohanhan/Desktop/210601001-makeupexam/210601001-makeupexam/WebGL Builds;;;;;;;\"}"
             }
         ]
     }
