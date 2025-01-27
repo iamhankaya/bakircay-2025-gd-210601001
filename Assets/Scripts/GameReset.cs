@@ -1,11 +1,13 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class GameReset : MonoBehaviour
 {
     [SerializeField]
-    private SpawnManager _spawnManager; // SpawnManager referansý
+    private SpawnManager _spawnManager; // SpawnManager referansÄ±
     [SerializeField]
-    private PlacementController _placementController; // PlacementController referansý
+    private PlacementController _placementController; // PlacementController referansÄ±
+    [SerializeField]
+    private Skill _gameSkill; // GameSkill referansÄ±
 
     public void OnClick()
     {
@@ -14,28 +16,38 @@ public class GameReset : MonoBehaviour
 
     private void ResetGame()
     {
-        // SpawnManager'dan spawn edilen nesneleri sýfýrla
+        // SpawnManager'dan spawn edilen nesneleri sÄ±fÄ±rla
         if (_spawnManager != null)
         {
             _spawnManager.ResetSpawnedObjects(); // Spawn edilen nesneleri sil
-            _spawnManager.SpawnAllObjects();     // Nesneleri yeniden oluþtur
+            _spawnManager.SpawnAllObjects();     // Nesneleri yeniden oluÅŸtur
         }
         else
         {
-            Debug.LogError("SpawnManager referansý bulunamadý!");
+            Debug.LogError("SpawnManager referansÄ± bulunamadÄ±!");
         }
 
-        // PlacementController'ý bul ve skoru sýfýrla
+        // PlacementController'Ä± bul ve skoru sÄ±fÄ±rla
         if (_placementController != null)
         {
-            _placementController.ResetPlacementArea(); // Placement alanýný sýfýrla
-            _placementController.UpdateScore(-_placementController.Score); // Skoru sýfýrla
+            _placementController.ResetPlacementArea(); // Placement alanÄ±nÄ± sÄ±fÄ±rla
+            _placementController.UpdateScore(-_placementController.Score); // Skoru sÄ±fÄ±rla
         }
         else
         {
-            Debug.LogError("PlacementController referansý bulunamadý!");
+            Debug.LogError("PlacementController referansÄ± bulunamadÄ±!");
         }
 
-        Debug.Log("Oyun sýfýrlandý!");
+        // Timer'Ä± sÄ±fÄ±rla
+        if (_gameSkill != null)
+        {
+            _gameSkill.ResetTimer();
+        }
+        else
+        {
+            Debug.LogError("GameSkill referansÄ± bulunamadÄ±!");
+        }
+
+        Debug.Log("Oyun sÄ±fÄ±rlandÄ±!");
     }
 }
